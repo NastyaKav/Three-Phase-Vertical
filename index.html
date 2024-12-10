@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Three-phase vertical separator size calculator</title>
+    <script>"script.js"</script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Three-phase vertical separator size calculator    </h1>
+    <form id="calculator-form">
+        <label for="qg">Enter Qg - gas flow rate:</label>
+        <input type="number" id="qg" name="qg" >
+        <br><br>
+        <label for="qo">Enter Qo - oil flow rate:</label>
+        <input type="number" id="qo" name="qo" >
+        <br><br>
+        <label for="qw">Enter Qw - water flow rate:</label>
+        <input type="number" id="qw" name="qw" >
+        <br><br>
+        <label for="po">Enter Po - operating pressure:</label>
+        <input type="number" id="po" name="po" >
+        <br><br>
+        <label for="to">Enter To - operating temrepature:</label>
+        <input type="number" id="to" name="to" >
+        <br><br>
+        <label for="sg">Enter Sg - specific gravity:</label>
+        <input type="number" id="sg" name="sg" >
+        <br><br>
+        <label for="sgo">Enter SG o - specific gravity of oil:</label>
+        <input type="number" id="sgo" name="sgo" >
+        <br><br>
+        <label for="sgw">Enter SG w - specific gravity of water:</label>
+        <input type="number" id="sgw" name="sgw" >
+        <br><br>
+        <label for="mo">Enter µ(o) - viscosity of oil:</label>
+        <input type="number" id="mo" name="mo" >
+        <br><br>
+        <label for="mw">Enter µ(w) - viscosity of water:</label>
+        <input type="number" id="mw" name="mw" >
+        <br><br>
+        <label for="dml">Enter dm(l) - liquid droplet size removal:</label>
+        <input type="number" id="dml" name="dml" >
+        <br><br>
+        <label for="dmw">Enter dm(w) - water droplet size removal:</label>
+        <input type="number" id="dmw" name="dmw" >
+        <br><br>
+        <label for="dmo">Enter dm(o) - oil droplet size removal:</label>
+        <input type="number" id="dmo" name="dmo" >
+        <br><br>
+        <img src="1.png" />
+        <br><br>
+        <label for="z">Enter z - compressibility factor:</label>
+        <input type="number" id="z" name="z" >
+        <br><br>
+        <img src="2.png" />
+        <br><br>
+        <label for="m">Enter µ - viscosity:</label>
+        <input type="number" id="m" name="m" >
+        <br><br>
+        <label for="tro">Enter tr(o) - retention time of oil:</label>
+        <input type="number" id="tro" name="tro" >
+        <br><br>
+        <label for="trw">Enter tr(w) - retention time of water:</label>
+        <input type="number" id="trw" name="trw" >
+        <br><br>
+        <h1>CDi = 0.34</h1>
+        <table id="results-table">
+            <thead>
+              <tr>
+                <th>do</th>
+                <th>ho+hw</th>
+                <th>Lss</th>
+                <th>Sr</th>
+              </tr>
+              <tr>
+                <th>84</th>
+                <th id="hohw84"></th>
+                <th id="lss84"></th>
+                <th id="sr84"></th>
+              </tr>
+              <tr>
+                <th>90</th>
+                <th id="hohw90"></th>
+                <th id="lss90"></th>
+                <th id="sr90"></th>
+              </tr>
+              <tr>
+                <th>96</th>
+                <th id="hohw96"></th>
+                <th id="lss96"></th>
+                <th id="sr96"></th>
+              </tr>
+              <tr>
+                <th>102</th>
+                <th id="hohw102"></th>
+                <th id="lss102"></th>
+                <th id="sr102"></th>
+              </tr>
+            <tr>
+            </thead>
+          </table>
+
+        <button type="button" id="calculate-btn">Calculate</button>
+        <h1>It is recommended that you choose a diameter that corresponds to a Slenderness ratio value between 1.5 and 3.</h1>
+    </form>
+    <h2>Minimum diameter: <span id="result">0</span></h2>
+    <script src="script.js"></script>
+</body>
+</html> 
